@@ -1,0 +1,74 @@
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: rgb(243,243,243);
+}
+
+.banner {
+    background-image: url('../images/banner_background.png');
+    height: 200px;
+    padding-top: 40px;
+
+    .banner-title {
+        height: 70px;
+        text-align: center;
+        
+        img {
+            height: 100%;
+        }
+    }
+
+    .navbar.bg-dark {
+        background-color:#0168B7 !important;
+        margin-top: 25px;
+        height: 45px;
+        
+        li.nav-item {
+            width: 110px;
+            text-align: center;
+        }
+
+        .btn-search {
+            background-color: #053E81;
+            color: white;
+        }
+    }
+}
+
+.category-header {
+    font-style: italic;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: #275984;
+    border-bottom-width: 2px !important;
+}
+
+#woyaobanTab a {
+    padding: 20px;
+    color: rgb(20, 85, 160);
+    width:120px;
+    height:120px;
+    margin-left:auto;
+    margin-right:auto;
+    display: block;
+
+    &.nav-link.active {
+        color: white;
+        background-color: rgb(20, 85, 160);
+        border-radius: 100%;
+    }
+    
+    span {
+        position: relative;
+        top: 8px;
+    }
+}
+
+#woyanbanTabContent {
+    margin-top: 20px;
+    height: 240px;
+}
