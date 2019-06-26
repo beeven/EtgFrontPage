@@ -1,74 +1,133 @@
-html, body {
-    padding: 0;
-    margin: 0;
+@background-color: rgb(243,243,243);
+
+
+html,
+body {
+  padding: 0;
+  margin: 0;
 }
 
 body {
-    background: rgb(243,243,243);
+  background: @background-color;
+}
+
+.header-menu {
+  line-height: 2rem;
+
+  a {
+    color: #382b2b;
+    text-decoration: none !important;
+
+    &:visited {
+      color: #382b2b;
+    }
+  }
 }
 
 .banner {
-    background-image: url('../images/banner_background.png');
-    height: 200px;
-    padding-top: 40px;
+  background-image: url('../images/banner_background.png');
+  height: 200px;
+  padding-top: 40px;
 
-    .banner-title {
-        height: 70px;
-        text-align: center;
-        
-        img {
-            height: 100%;
-        }
+  .banner-title {
+    height: 70px;
+    text-align: center;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .navbar.bg-dark {
+    background-color: #09518b !important;
+    margin-top: 25px;
+    height: 45px;
+
+    li.nav-item {
+      width: 110px;
+      text-align: center;
     }
 
-    .navbar.bg-dark {
-        background-color:#0168B7 !important;
-        margin-top: 25px;
-        height: 45px;
-        
-        li.nav-item {
-            width: 110px;
-            text-align: center;
-        }
-
-        .btn-search {
-            background-color: #053E81;
-            color: white;
-        }
+    .btn-search {
+      background-color: #053e81;
+      color: white;
     }
+  }
 }
 
 .category-header {
-    font-style: italic;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    color: #275984;
-    border-bottom-width: 2px !important;
+  font-style: italic;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  color: #e47942;
+  border-bottom-width: 2px !important;
+
+  
 }
 
-#woyaobanTab a {
-    padding: 20px;
-    color: rgb(20, 85, 160);
-    width:120px;
-    height:120px;
-    margin-left:auto;
-    margin-right:auto;
-    display: block;
+#woyaobanTab a.nav-link {
+  padding: 20px;
+  color: rgb(20, 85, 160);
+  width: 120px;
+  height: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  z-index: 1;
+  border-radius: 100%;
+  background: transparent; 
+  transition: color 0.6s ease;
 
-    &.nav-link.active {
-        color: white;
-        background-color: rgb(20, 85, 160);
-        border-radius: 100%;
+  &.active {
+    color: white;
+    background-color: transparent;
+    border-radius: 100%;
+  }
+
+  &:hover {
+    background-color: #e3e3e3;
+    &.active {
+      background-color: transparent;
     }
-    
-    span {
-        position: relative;
-        top: 8px;
-    }
+  }
+
+  span {
+    position: relative;
+    top: 8px;
+  }
+}
+
+#woyaobanTab .selector {
+  height: 120px;
+  width: 120px;
+  display: inline-block;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+  border-radius: 100%;
+  transition-duration: 0.6s;
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  background-color: #005584;
+  background-image: linear-gradient(45deg, #005584 0%, #207ce5 98%, #207ce5 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#005584', endColorstr='#207ce5', GradientType=1);
 }
 
 #woyanbanTabContent {
-    margin-top: 20px;
-    height: 240px;
+  margin-top: 20px;
+  min-height: 200px;
+
+    a {
+      background: white;
+    }
+}
+
+.footer {
+  background: #09518b;
+  line-height: 40px;
+  
+  .links span {
+    margin: 0px 5px;
+  }
 }
